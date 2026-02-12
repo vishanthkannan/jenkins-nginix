@@ -1,2 +1,110 @@
-welcome to great killer magic show
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vishanth DevOps Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #00f2fe;
+        }
+
+        h2 {
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            background: #00f2fe;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #00f2fe;
+            color: #000;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1> Vishanth DevOps Pipeline</h1>
+        <h2>CI/CD Successfully Deployed with Jenkins & Docker</h2>
+
+        <p>
+            This website is automatically deployed using
+            GitHub → Jenkins → Docker → AWS EC2.
+            Every code change triggers a new deployment.
+        </p>
+
+        <div>
+            <span class="badge">AWS EC2</span>
+            <span class="badge">Jenkins</span>
+            <span class="badge">Docker</span>
+            <span class="badge">GitHub</span>
+        </div>
+
+        <br><br>
+
+        <a href="#" class="btn">Deployment Successful 🎉</a>
+
+        <footer>
+            Built by Vishanth Kannan | DevOps Learning Journey 2026
+        </footer>
+    </div>
+
+</body>
+</html>
