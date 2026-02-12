@@ -3,26 +3,31 @@ pipeline {
 
     stages {
 
-        stage('Source Code') {
+        stage('Clone Repository') {
             steps {
-                echo 'Cloning...'
-                git branch: 'main', url: 'https://github.com/Marvel-k23/jenkins-nginix.git'
+                echo 'Cloning repository...'
+                git branch: 'main', url: 'https://github.com/vishanthkannan/jenkins-nginix.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                echo 'Building Docker Image...'
+                echo 'Building Docker image...'
                 sh 'docker build -t job-11 .'
             }
         }
 
-        stage('Deploy Container') {
+        stage('Stop Old Container') {
             steps {
-                echo 'Deploying Container...'
-                 sh 'docker stop job-11'
-                 sh 'docker rm job-11'
-                
+                echo 'Stopping old container if exists...'
+                sh 'docker stop job-11 || true'
+                sh 'docker rm job-11 || true'
+            }
+        }
+
+        stage('Run Container') {
+            steps {
+                echo 'Running new container...'
                 sh 'docker run -d -p 80:80 --name job-11 job-11'
             }
         }
