@@ -2,109 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vishanth DevOps Project</title>
+    <title>VK Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #111;
             color: white;
+            padding: 15px 40px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        .hero {
+            background-color: #222;
+            color: white;
+            padding: 60px 40px;
             text-align: center;
         }
 
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            max-width: 600px;
-        }
-
-        h1 {
-            font-size: 40px;
+        .hero h2 {
             margin-bottom: 10px;
-            color: #00f2fe;
         }
 
-        h2 {
-            font-weight: 300;
-            margin-bottom: 20px;
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 40px;
         }
 
-        p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            line-height: 1.6;
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
-        .badge {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 20px;
-            background: #00f2fe;
-            color: #000;
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .price {
+            color: green;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 25px;
-            background: #00f2fe;
-            color: #000;
-            border-radius: 30px;
+            padding: 8px 15px;
+            background-color: #111;
+            color: white;
             text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s ease;
+            font-size: 14px;
+            border-radius: 4px;
         }
 
         .btn:hover {
-            background: white;
-            transform: scale(1.05);
+            background-color: #444;
         }
 
         footer {
-            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: white;
             font-size: 14px;
-            opacity: 0.8;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1> Vishanth DevOps Pipeline</h1>
-        <h2>CI/CD Successfully Deployed with Jenkins & Docker</h2>
+<header>
+    <h1>VK Store</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Cart</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
 
-        <p>
-            This website is automatically deployed using
-            GitHub → Jenkins → Docker → AWS EC2.
-            Every code change triggers a new deployment.
-        </p>
+<section class="hero">
+    <h2>Welcome to VK Online Store</h2>
+    <p>Deployed using Jenkins CI/CD Pipeline on AWS EC2 🚀</p>
+</section>
 
-        <div>
-            <span class="badge">AWS EC2</span>
-            <span class="badge">Jenkins</span>
-            <span class="badge">Docker</span>
-            <span class="badge">GitHub</span>
-        </div>
+<section class="products">
 
-        <br><br>
-
-        <a href="#" class="btn">Deployment Successful 🎉</a>
-
-        <footer>
-            Built by Vishanth Kannan | DevOps Learning Journey 2026
-        </footer>
+    <div class="card">
+        <img src="https://picsum.photos/300/200?1">
+        <h3>Wireless Headphones</h3>
+        <p class="price">₹2,499</p>
+        <a href="#" class="btn">Add to Cart</a>
     </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300/200?2">
+        <h3>Smart Watch</h3>
+        <p class="price">₹3,999</p>
+        <a href="#" class="btn">Add to Cart</a>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300/200?3">
+        <h3>Bluetooth Speaker</h3>
+        <p class="price">₹1,799</p>
+        <a href="#" class="btn">Add to Cart</a>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/300/200?4">
+        <h3>Gaming Mouse</h3>
+        <p class="price">₹999</p>
+        <a href="#" class="btn">Add to Cart</a>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 VK Store | DevOps CI/CD Demo by Vishanth
+</footer>
 
 </body>
 </html>
